@@ -1,0 +1,3 @@
+# EbubekirBastamatxtokuma
+ Ebubekir Bastama Txt Okuma Programı
+  Bu dll ile rahatlıkla txt dosyalarını okuyup Listbox'a ve ya dizi olarak okuyup işlemler yapabilirsiniz...
