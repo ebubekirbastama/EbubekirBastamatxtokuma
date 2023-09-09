@@ -1,5 +1,9 @@
 # EbubekirBastamatxtokuma
  Ebubekir Bastama Txt Okuma Programı..
+ 
+# Hangi Sürüm Framework Kullanıldı.
+ .net Framework 8.1 ile yazılmıştır.
+ 
 # .dll ne işe yarar
     Bu dll kullanıcıların dosyalardan string verileri rahatlıkla okuması için geliştirilmiştir ve kullancıların hiç uğraşma'dan verileri rahatlıkla okumasını sağlar..
 # .dll Nasıl Yükleriz.
