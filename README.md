@@ -7,53 +7,50 @@
     Diğer yüklemeler
     
 # Package Manager
-      Install-Package Ebubekir.Bastama -Version 1.0.0
+      Install-Package Ebubekir.Bastama -Version 2.0.0
       
 #.NET CLI
 
-    dotnet add package Ebubekir.Bastama --version 1.0.0
+    dotnet add package Ebubekir.Bastama --version 2.0.0
     
 #PackageReference
 
-     <PackageReference Include="Ebubekir.Bastama" Version="1.0.0" />
+     <PackageReference Include="Ebubekir.Bastama" Version="2.0.0" />
      
 #Paket CLI
 
-        paket add Ebubekir.Bastama --version 1.0.0
+        paket add Ebubekir.Bastama --version 2.0.0
         
 #Bu Sistemi Nasıl Kullanabiliriz.
-         .dll'in kullanımı çok basittir ve 2 metod bulunmaktadır.
+         .dll'in kullanımı çok basittir ve 3 metod bulunmaktadır.
         
-        1-) listbox dolduran Metod
+        1-) listbox dolduran Metod.
         2-) Dizi Döndüren Metod.
+        3-) Yüksek Boyutlu .txt dosyaları okuma.
         
- # listbox Döndüren Metod
+ # ListBox'a Veri Ekleyen Metod
+ 
+   ```csharp
      
-   using EbubekirBastamatxtokuma;
-     
-     BekraTxtOkuma k = new BekraTxtOkuma();
-        k.Txt_Aktar(op.FileName.ToString(),listBox2,false);
+   EBSTxt_Okuma.EBSTxtOkuma.Txtİmport(op.FileName.ToString(), listBox2, false);
+   
+   ``` 
+
  # Dizi Döndüren Metod
    
-   using EbubekirBastamatxtokuma;
-     
-            BekraTxtOkuma k = new BekraTxtOkuma();
-           string[] dizi = k.Txt_Aktar_Dizi(op.FileName.ToString(), false);
-            for (int i = 0; i < k.Txt_Aktar_Dizi(op.FileName.ToString(),false).Length; i++)
-            {
-                listBox2.Items.Add(dizi[i].ToString());
-            }
-            
- # Ücretli Destek ve Bağış Yapmak için
-  
-  Whatshapp : https://api.whatsapp.com/send?phone=905554128854&text=Merhaba
- 
-  Phone : 905554128854
-  
-Bizlere Destek Olmak için:
-Bu proje gibi projelerin gelmesi ve bizlere destek olmak için bağış yapabilirsiniz.
-You can donate to come to projects like this project and support us.
+```csharp
 
-                                                 Kuvettürk İban Number
-                                              ------------------------------
-                                               TR40 0020 5000 0939 0747 4000 01
+ string[] dizi = EBSTxt_Okuma.EBSTxtOkuma.TxtimportDizi(op.FileName.ToString(), false);
+            for (int i = 0; i < dizi.Length; i++)
+            {
+                listBox2.Items.Add(dizi[i]);
+            }
+```
+ # Yüksek Boyutlu txt Dosyası Okuma
+
+   ```csharp
+      
+    EBSTxt_Okuma.EBSTxtOkuma.ImportLargeFileToListBox(op.FileName.ToString(),ListBox1, false);
+    
+   ``` 
+
